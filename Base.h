@@ -13,11 +13,10 @@ class Printable {
 
 class Named : public virtual Printable {
 public:
-	Named(std::string name): m_name(name){}
-	std::string get_name() const {
+	Named(std::string const & name): m_name(name){}
+	std::string const & get_name() const {
 		return m_name;
 	}
-	virtual std::string get_string() = 0;
 private:
 	std::string m_name;
 };
